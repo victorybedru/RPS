@@ -3,41 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <section id="upper">
+    <section id="rounds-selection">
+        <div id="rounds-container">
+            <h1>Rock Paper Scissors</h1>
+            <h2>Choose Number of Rounds</h2>
+            <div id="rounds-options">
+                <div class="round-option" data-rounds="3">3 Rounds</div>
+                <div class="round-option" data-rounds="5">5 Rounds</div>
+                <div class="round-option" data-rounds="7">7 Rounds</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="upper" class="hidden">
         <h1>Rock Paper Scissors</h1>
     </section>
     
-    <section id="lower">
+    <section id="lower" class="hidden">
         <h2>Select your weapon</h2>
         <div id="weapons">
-            <div id="rock" data-choice="rock"><i class="fa-solid fa-hand-back-fist"></i>
-            <p>Rock</p></div>
-            <div id="paper" data-choice="paper"><i class="fa-solid fa-hand"></i><p>Paper</p></div>
-            <div id="scissor"data-choice="scissor"><i class="fa-solid fa-hand-scissors"></i> <p>Scissors</p></div>
-
-
-            
+            <div id="rock" data-choice="rock">
+                <i class="fa-solid fa-hand-back-fist"></i>
+                <p>Rock</p>
+            </div>
+            <div id="paper" data-choice="paper">
+                <i class="fa-solid fa-hand"></i>
+                <p>Paper</p>
+            </div>
+            <div id="scissor" data-choice="scissor">
+                <i class="fa-solid fa-hand-scissors"></i>
+                <p>Scissors</p>
+            </div>
         </div>
     </section>
-    <section id="lower2">
-        <h2 id="comparison"> <span id="player">Player</span><span id="span">Vs</span> <span id="comp">Computer</span></h2>
-        <div id="hands"><div id="playerHand" class="fist"><span id="player"><i class="fa-solid fa-hand-fist"></i></span></div>
-        <div id="compHand" class="fist" ><i class="fa-solid fa-hand-fist"></i></div>
+    
+    <section id="lower2" class="hidden">
+        <h2 id="comparison">
+            <span id="playerSpan">Player</span>
+            <span id="vsSpan">Vs</span>
+            <span id="compSpan">Computer</span>
+        </h2>
+        <div id="hands">
+            <div id="playerHand" class="fist">
+                <i class="fa-solid fa-hand-fist"></i>
+            </div>
+            <div id="compHand" class="fist">
+                <i class="fa-solid fa-hand-fist"></i>
+            </div>
         </div>
-        
     </section>
-    <div id="winningText"></div>
-    <div><button id="again"><i class="fa-solid fa-rotate-right"></i> &nbsp;Play Again</button></div>
-    <div id="results">
-        <div id="win">Won: <span id="resW"> </span> &nbsp;&nbsp;&nbsp; |</div>
-        <div id="lose">Lost: <span id="resL"> </span>&nbsp;&nbsp;&nbsp; |</div>
-        <div id="draw">Draw: <span id="resD"> </span></div>
+    
+    <div id="winningText" class="hidden"></div>
+    
+    <div id="buttonContainer">
+        <button id="again" class="hidden">
+            <i class="fa-solid fa-rotate-right"></i> &nbsp;Next Round
+        </button>
+    </div>
+    
+    <div id="results" class="hidden">
+        <div id="win">Won: <span id="resW">0</span> &nbsp;&nbsp;|</div>
+        <div id="lose">Lost: <span id="resL">0</span> &nbsp;&nbsp;|</div>
+        <div id="draw">Draw: <span id="resD">0</span></div>
     </div>
 </body>
 </html>
