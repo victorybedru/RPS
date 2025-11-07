@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <section id="upper">
+        <h1>Rock Paper Scissors</h1>
+    </section>
+    
+    <section id="lower">
+        <h2>Select your weapon</h2>
+        <div id="weapons">
+            <div id="rock" data-choice="rock"><i class="fa-solid fa-hand-back-fist"></i>
+            <p>Rock</p></div>
+            <div id="paper" data-choice="paper"><i class="fa-solid fa-hand"></i><p>Paper</p></div>
+            <div id="scissor"data-choice="scissor"><i class="fa-solid fa-hand-scissors"></i> <p>Scissors</p></div>
+
+
+            
+        </div>
+    </section>
+    <section id="lower2">
+        <h2 id="comparison"> <span id="player">Player</span><span id="span">Vs</span> <span id="comp">Computer</span></h2>
+        <div id="hands"><div id="playerHand" class="fist"><span id="player"><i class="fa-solid fa-hand-fist"></i></span></div>
+        <div id="compHand" class="fist" ><i class="fa-solid fa-hand-fist"></i></div>
+        </div>
+        
+    </section>
+    <div id="winningText"></div>
+    <div><button id="again"><i class="fa-solid fa-rotate-right"></i> &nbsp;Play Again</button></div>
+    <div id="results">
+        <div id="win">Won: <span id="resW"> </span> &nbsp;&nbsp;&nbsp; |</div>
+        <div id="lose">Lost: <span id="resL"> </span>&nbsp;&nbsp;&nbsp; |</div>
+        <div id="draw">Draw: <span id="resD"> </span></div>
+    </div>
+</body>
+</html>
